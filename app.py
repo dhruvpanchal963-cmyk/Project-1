@@ -303,3 +303,6 @@ elif page == "Raw Data":
     st.dataframe(df.head(5000), use_container_width=True, hide_index=True)
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("Download filtered CSV", csv, file_name="fitx_filtered_events.csv", mime="text/csv")
+
+st.divider()
+st.caption(f"FITX UX Intelligence • {len(FILES)} supplied raw datasets • {len(raw):,} total event rows")
